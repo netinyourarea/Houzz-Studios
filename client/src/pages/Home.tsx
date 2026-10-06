@@ -86,7 +86,7 @@ export default function Home() {
       <div className="project-rail">
         {projects.map((project, index) => <Link className={`project-tile project-tile--${index + 1}`} href={`/projects/${project.slug}`} key={project.slug}><Media src={project.image} alt={`${project.name} interior project in ${project.location}`} /><span className="project-tile__shade" /><span className="project-tile__meta"><span>0{index + 1} / {project.type.toUpperCase()}</span><ArrowUpRight size={17} /></span><span className="project-tile__title"><strong>{project.name}</strong><small>{project.location}</small></span></Link>)}
       </div>
-      <div className="projects-dark__foot"><span>ILLUSTRATIVE VISUAL STUDIES · 2024 — 2025</span><span>INDIA / RESIDENTIAL & COMMERCIAL</span></div>
+      <div className="projects-dark__foot"><span>ILLUSTRATIVE VISUAL STUDIES · 2024 — 2025</span><span>USA / RESIDENTIAL & COMMERCIAL</span></div>
     </section>
 
     <section className="about-strip section-pad" aria-labelledby="about-strip-title">

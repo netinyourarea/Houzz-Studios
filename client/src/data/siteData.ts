@@ -49,7 +49,7 @@ export const products: Product[] = [
     name: "The Luma Chair", slug: "luma-chair", category: "Chairs", categorySlug: "chairs",
     description: "Soft geometry. Quiet character. Luma brings a generous, considered seat to the quieter corners of a room.",
     short: "Soft geometry. Quiet character.", materials: "Solid oak frame · natural wool upholstery · high-resilience foam",
-    dimensions: "W 76 × D 82 × H 73 cm · seat height 42 cm", price: 89900,
+    dimensions: "W 30 × D 32 × H 29 in · seat height 17 in", price: 1090,
     image: "/images/luma-chair.jpg",
     secondaryImage: "/images/armchair.jpg",
     care: "Vacuum upholstery gently with a soft brush. Wipe the timber with a dry, lint-free cloth; keep away from direct heat.",
@@ -58,7 +58,7 @@ export const products: Product[] = [
   {
     name: "Arlo Sofa", slug: "arlo-sofa", category: "Sofas", categorySlug: "sofas",
     description: "A low, open silhouette with an easy seat and a linen-rich cover that softens with time.",
-    short: "Room to settle into.", materials: "Solid hardwood frame · linen blend · natural latex and foam", dimensions: "W 218 × D 94 × H 76 cm", price: 245000,
+    short: "Room to settle into.", materials: "Solid hardwood frame · linen blend · natural latex and foam", dimensions: "W 86 × D 37 × H 30 in", price: 2950,
     image: "/images/sofa.jpg",
     secondaryImage: "/images/sunlit-interior.jpg",
     care: "Blot spills promptly with a clean cloth. Professional cleaning is recommended for upholstery.", shipping: "Made to order; delivery is coordinated with the studio and confirmed before an order is placed.",
@@ -66,7 +66,7 @@ export const products: Product[] = [
   {
     name: "Serein Bed", slug: "serein-bed", category: "Bedroom", categorySlug: "bedroom",
     description: "A calm, grounded bed with a slim oak frame and a softly upholstered headboard.",
-    short: "A softer start, a quieter end.", materials: "Solid oak · natural linen · FSC-certified plywood slats", dimensions: "Queen: W 168 × D 215 × H 98 cm", price: 178000,
+    short: "A softer start, a quieter end.", materials: "Solid oak · natural linen · FSC-certified plywood slats", dimensions: "Queen: W 66 × D 85 × H 39 in", price: 2150,
     image: "/images/bedroom.jpg",
     secondaryImage: "/images/fabric.jpg",
     care: "Dust timber with a soft dry cloth. Upholstered panels may be gently vacuumed using a brush attachment.", shipping: "Made to order. Mattress is not included; delivery and assembly are confirmed with the studio.",
@@ -74,15 +74,15 @@ export const products: Product[] = [
   {
     name: "Morrow Dining Table", slug: "morrow-dining-table", category: "Dining", categorySlug: "dining",
     description: "A considered gathering point in solid teak, shaped with softened corners and a quiet, generous stance.",
-    short: "For the rituals that become stories.", materials: "Solid teak · hand-finished natural oil", dimensions: "W 190 × D 92 × H 75 cm", price: 168000,
+    short: "For the rituals that become stories.", materials: "Solid teak · hand-finished natural oil", dimensions: "W 75 × D 36 × H 30 in", price: 2050,
     image: "/images/dining-table.jpg",
     secondaryImage: "/images/dining.jpg",
     care: "Use coasters for hot vessels and wipe with a soft damp cloth. Refresh the natural-oil finish as needed.", shipping: "Made to order. Delivery and installation are confirmed with the studio before dispatch.",
   },
   {
     name: "Stillwater Table", slug: "stillwater-table", category: "Tables", categorySlug: "tables",
-    description: "A low, rounded stone form that gives a living space a natural centre of gravity.",
-    short: "Quiet strength, close at hand.", materials: "Honed limestone · concealed reinforced base", dimensions: "Ø 86 × H 34 cm", price: 74500,
+    description: "A low, rounded stone form that gives a living space a natural center of gravity.",
+    short: "Quiet strength, close at hand.", materials: "Honed limestone · concealed reinforced base", dimensions: "Ø 34 × H 13 in", price: 890,
     image: "/images/stillwater-room.jpg",
     secondaryImage: "/images/coffee-table.jpg",
     care: "Wipe with a soft damp cloth. Avoid acidic cleaners and use coasters to protect the honed stone.", shipping: "Natural stone varies subtly. Delivery and access are confirmed with the studio before dispatch.",
@@ -90,7 +90,7 @@ export const products: Product[] = [
   {
     name: "Orren Sideboard", slug: "orren-sideboard", category: "Storage", categorySlug: "storage",
     description: "A quiet cabinet with fine fluting, generous storage and a warm walnut presence.",
-    short: "A place for the things you keep.", materials: "American walnut veneer · solid walnut details · satin bronze hardware", dimensions: "W 180 × D 46 × H 78 cm", price: 189000,
+    short: "A place for the things you keep.", materials: "American walnut veneer · solid walnut details · satin bronze hardware", dimensions: "W 71 × D 18 × H 31 in", price: 2290,
     image: "/images/sideboard.jpg",
     secondaryImage: "/images/storage-shelves.jpg",
     care: "Dust with a soft cloth. Use a dry cloth for spills and avoid prolonged direct sunlight.", shipping: "Made to order; delivery and placement are coordinated with the studio.",
@@ -100,7 +100,7 @@ export const products: Product[] = [
 // These are initial illustrative portfolio entries; replace year, project specifics and images with verified client-approved case-study material.
 export const projects: Project[] = [
   {
-    name: "Modern Apartment", slug: "modern-apartment", location: "Mumbai", year: "2025", type: "Residential",
+    name: "Modern Apartment", slug: "modern-apartment", location: "New York", year: "2025", type: "Residential",
     image: "/images/apartment.jpg",
     summary: "A considered city home shaped around slower mornings and generous evenings.",
     concept: "Warm oak, softened edges and an open living space bring a quieter pace to the city's everyday rhythm. Storage is integrated into the architecture; light is allowed to travel from room to room.",
@@ -108,15 +108,15 @@ export const projects: Project[] = [
     gallery: ["/images/apartment-living.jpg", "/images/apartment-sofa.jpg"],
   },
   {
-    name: "Luxury Villa", slug: "luxury-villa", location: "Goa", year: "2024", type: "Residential",
+    name: "Luxury Villa", slug: "luxury-villa", location: "Los Angeles", year: "2024", type: "Residential",
     image: "/images/villa.jpg",
     summary: "An open, tactile retreat with a gentle connection to its garden setting.",
     concept: "A palette of lime plaster, teak and local stone lets the landscape set the mood. Rooms open to the garden while furniture stays low, tactile and easy to live with.",
-    materials: ["Teak", "Laterite stone", "Lime plaster", "Handwoven cotton"],
+    materials: ["Teak", "Natural limestone", "Lime plaster", "Handwoven cotton"],
     gallery: ["/images/villa-exterior.jpg", "/images/villa-lounge.jpg"],
   },
   {
-    name: "Contemporary Office", slug: "contemporary-office", location: "Bengaluru", year: "2025", type: "Commercial",
+    name: "Contemporary Office", slug: "contemporary-office", location: "Austin", year: "2025", type: "Commercial",
     image: "/images/office.jpg",
     summary: "A work environment that makes room for focus, exchange and a little pause.",
     concept: "A welcoming threshold leads into a flexible studio landscape. Timber, pale stone and careful acoustic choices create a calmer backdrop for different ways of working.",
@@ -146,7 +146,7 @@ const baseMeta: Record<string, PageMetaData> = {
   "/about": { title: "Our Story — HOUZZ STUDIOS", description: "Meet HOUZZ STUDIOS: a design-led furniture and interior studio shaped by craft, material and the way people live." },
   "/furniture": { title: "Furniture Collection — HOUZZ STUDIOS", description: "Explore considered furniture for living, dining, bedrooms and everyday rituals, shaped with natural materials and lasting craft." },
   "/interior-design": { title: "Interior Design — HOUZZ STUDIOS", description: "Thoughtful residential and commercial interior design, from first conversation through material, making and handover." },
-  "/projects": { title: "Selected Projects — HOUZZ STUDIOS", description: "Explore illustrative residential and commercial project stories from Mumbai, Goa and Bengaluru." },
+  "/projects": { title: "Selected Projects — HOUZZ STUDIOS", description: "Explore illustrative residential and commercial project stories from New York, Los Angeles and Austin." },
   "/contact": { title: "Start a Conversation — HOUZZ STUDIOS", description: "Tell HOUZZ STUDIOS about the space you are imagining. Begin a conversation about furniture or interior design." },
 };
 
@@ -162,6 +162,6 @@ export function getPageMeta(path: string): PageMetaData {
   return { title: "Page not found — HOUZZ STUDIOS", description: "The page could not be found. Return to HOUZZ STUDIOS to explore furniture and interiors." };
 }
 
-export const formatPrice = (amount: number) => `₹${amount.toLocaleString("en-IN")}`;
+export const formatPrice = (amount: number) => `$${amount.toLocaleString("en-US")}`;
 
 export const phone = { display: "(866) 381-6479", tel: "+18663816479" };

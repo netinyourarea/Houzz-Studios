@@ -30,7 +30,7 @@ export function BagProvider({ children }: { children: ReactNode }) {
     try {
       window.localStorage.setItem(STORAGE_KEY, JSON.stringify(items));
     } catch {
-      // Private browsing or storage restrictions do not block the enquiry flow.
+      // Private browsing or storage restrictions do not block the inquiry flow.
     }
   }, [items]);
 
