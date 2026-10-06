@@ -52,3 +52,24 @@
 .material-note>div>p:last-child{max-width:300px;font-size:15.5px}
 .category-panel__caption small{font-size:14px}
 @media(max-width:620px){.home-hero__index,.scroll-cue{display:none}}
+
+/* Phone / call buttons */
+.call-link{display:inline-flex;align-items:center;gap:9px;white-space:nowrap}
+.header-call{min-height:40px;padding:0 16px;border:1px solid currentColor;border-radius:999px;font-size:14.5px;font-weight:700;letter-spacing:.02em;margin-right:8px;transition:background .25s,color .25s}
+.header-call:hover{background:var(--ink);color:var(--paper-light);border-color:var(--ink)}
+.site-header--transparent .header-call:hover{background:#fff;color:var(--ink);border-color:#fff}
+.button--outline{background:transparent;color:var(--ink);border-color:var(--ink)}
+.button--outline:hover{background:var(--ink);color:var(--paper-light)}
+.button--wide.product-call{width:100%;margin-top:12px;gap:10px}
+.contact-form__buttons{display:flex;flex-wrap:wrap;gap:12px}
+.contact-form__buttons .button{gap:12px}
+.contact-phone{font-family:var(--serif);font-size:28px;font-weight:600;color:var(--ink)}
+.contact-phone:hover{color:var(--walnut)}
+.footer-call{margin:6px 0;font-weight:700;font-size:16px;color:inherit}
+.menu-panel__call{margin:24px 0 0;align-self:flex-start;gap:12px}
+.service-cta__call{margin-left:22px}
+.home-hero__actions,.closing-cta__links{flex-wrap:wrap;row-gap:14px}
+@media(max-width:1180px){.header-call{padding:0;width:40px;justify-content:center;margin-right:2px}.header-call .call-link__text{display:none}}
+@media(max-width:620px){.service-cta__call{margin:16px 0 0}.contact-form__buttons .button{width:100%}}
+.contact-details .contact-phone{font-family:var(--sans);font-size:18px;font-weight:700;letter-spacing:.01em}
+.menu-panel__call{margin-left:22px}

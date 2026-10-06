@@ -1,7 +1,8 @@
+import { phone } from "@/data/siteData";
 import { useRoute, Link } from "wouter";
 import { ArrowRight, ArrowUpRight } from "lucide-react";
 import { designSteps, materials, projects } from "@/data/siteData";
-import { ArrowLink, Eyebrow, Media, PageMeta, SectionLabel } from "@/components/site/Primitives";
+import { CallLink, ArrowLink, Eyebrow, Media, PageMeta, SectionLabel } from "@/components/site/Primitives";
 
 export function InteriorDesignPage() {
   return <>
@@ -18,7 +19,7 @@ export function InteriorDesignPage() {
 
     <section className="selected-work section-pad"><div className="selected-work__heading"><div><Eyebrow>SELECTED WORK</Eyebrow><h2>A few spaces,<br /><em>many stories.</em></h2></div><ArrowLink href="/projects">Explore all projects</ArrowLink></div><div className="selected-work__list">{projects.slice(0, 2).map((project, index) => <Link key={project.slug} href={`/projects/${project.slug}`} className={`selected-work__item selected-work__item--${index + 1}`}><Media src={project.image} alt={`${project.name} project in ${project.location}`} /><span className="selected-work__meta"><span>0{index + 1} · {project.location.toUpperCase()}</span><strong>{project.name}</strong><ArrowUpRight size={18} /></span></Link>)}</div></section>
 
-    <section className="service-cta"><div><Eyebrow light>YOUR SPACE, NEXT</Eyebrow><h2>It begins with<br /><em>a conversation.</em></h2><p>Tell us a little about the place you are imagining. We’ll take it from there, together.</p><Link className="button button--light" href="/contact">Book a Consultation <ArrowRight size={16} /></Link></div><span className="service-cta__mark">H<br />S</span></section>
+    <section className="service-cta"><div><Eyebrow light>YOUR SPACE, NEXT</Eyebrow><h2>It begins with<br /><em>a conversation.</em></h2><p>Tell us a little about the place you are imagining. We’ll take it from there, together.</p><Link className="button button--light" href="/contact">Book a Consultation <ArrowRight size={16} /></Link> <CallLink className="hero-text-link service-cta__call">Or call {phone.display}</CallLink></div><span className="service-cta__mark">H<br />S</span></section>
   </>;
 }
 

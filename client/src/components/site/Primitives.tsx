@@ -1,9 +1,9 @@
-import { ArrowDownRight, ArrowRight, ArrowUpRight } from "lucide-react";
+import { ArrowDownRight, ArrowRight, ArrowUpRight, Phone } from "lucide-react";
 import { useEffect } from "react";
 import { Link } from "wouter";
 import { withBase } from "@/lib/utils";
 import type { ReactNode } from "react";
-import type { PageMetaData } from "@/data/siteData";
+import { phone, type PageMetaData } from "@/data/siteData";
 
 export function PageMeta({ meta }: { meta: PageMetaData }) {
   useEffect(() => {
@@ -52,4 +52,8 @@ export function SectionLabel({ number, children }: { number?: string; children: 
 
 export function RevealText({ children, className = "" }: { children: ReactNode; className?: string }) {
   return <div className={`reveal-text ${className}`}>{children}</div>;
+}
+
+export function CallLink({ className = "", children, label = phone.display, size = 15 }: { className?: string; children?: ReactNode; label?: string; size?: number }) {
+  return <a className={`call-link ${className}`} href={`tel:${phone.tel}`} aria-label={`Call HOUZZ STUDIOS at ${phone.display}`}><Phone size={size} strokeWidth={1.6} aria-hidden="true" /><span className="call-link__text">{children ?? label}</span></a>;
 }

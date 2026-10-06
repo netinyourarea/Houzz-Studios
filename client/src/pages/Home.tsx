@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { Link } from "wouter";
 import { ArrowDown, ArrowLeft, ArrowRight, ArrowUpRight } from "lucide-react";
 import { categories, materials, products, projects, formatPrice } from "@/data/siteData";
-import { ArrowLink, Eyebrow, Media, PageMeta, RoundLink, SectionLabel } from "@/components/site/Primitives";
+import { ArrowLink, CallLink, Eyebrow, Media, PageMeta, RoundLink, SectionLabel } from "@/components/site/Primitives";
 
 function MaterialJournal() {
   const [activeIndex, setActiveIndex] = useState(0);
@@ -40,7 +40,7 @@ export default function Home() {
     <section className="home-hero" aria-labelledby="home-title">
       <Media src="/images/hero-living.jpg" alt="Sculptural furniture in a warm modern residence opening to a mountain view" priority className="home-hero__photo" />
       <div className="home-hero__shade" />
-      <div className="home-hero__content"><Eyebrow light>FURNITURE / INTERIORS / DESIGN</Eyebrow><h1 id="home-title">Furniture That<br /><em>Defines Your Space</em></h1><p>Thoughtfully designed furniture and interiors for modern living.</p><div className="home-hero__actions"><Link className="button button--light" href="/furniture">Explore Collection <ArrowRight size={16} /></Link><Link className="hero-text-link" href="/interior-design">Discover Interior Design <ArrowUpRight size={15} /></Link></div></div>
+      <div className="home-hero__content"><Eyebrow light>FURNITURE / INTERIORS / DESIGN</Eyebrow><h1 id="home-title">Furniture That<br /><em>Defines Your Space</em></h1><p>Thoughtfully designed furniture and interiors for modern living.</p><div className="home-hero__actions"><Link className="button button--light" href="/furniture">Explore Collection <ArrowRight size={16} /></Link><Link className="hero-text-link" href="/interior-design">Discover Interior Design <ArrowUpRight size={15} /></Link><CallLink className="hero-text-link" /></div></div>
       <div className="home-hero__index"><span>01</span><span className="hero-index-rule" /><span>09</span></div>
       <a className="scroll-cue" href="#discovery"><span>SCROLL TO EXPLORE</span><ArrowDown size={14} strokeWidth={1.4} /></a>
       <div className="hero-caption">A HOME, THOUGHTFULLY CONSIDERED · 01 / 09</div>
@@ -100,7 +100,7 @@ export default function Home() {
     <section className="closing-cta">
       <Media src="/images/evening-chair.jpg" alt="A quiet, dimly lit interior made for an evening conversation" />
       <div className="closing-cta__overlay" />
-      <div className="closing-cta__content"><Eyebrow light>A NEW SPACE BEGINS WITH A CONVERSATION</Eyebrow><h2>Let’s Design<br /><em>Your Space</em></h2><p>Tell us what you’re imagining. We’ll help turn it into a space worth living in.</p><div className="closing-cta__links"><Link className="button button--light" href="/contact">Start a Conversation <ArrowRight size={16} /></Link><Link className="hero-text-link" href="/projects">View Our Projects <ArrowUpRight size={15} /></Link></div></div>
+      <div className="closing-cta__content"><Eyebrow light>A NEW SPACE BEGINS WITH A CONVERSATION</Eyebrow><h2>Let’s Design<br /><em>Your Space</em></h2><p>Tell us what you’re imagining. We’ll help turn it into a space worth living in.</p><div className="closing-cta__links"><Link className="button button--light" href="/contact">Start a Conversation <ArrowRight size={16} /></Link><Link className="hero-text-link" href="/projects">View Our Projects <ArrowUpRight size={15} /></Link><CallLink className="hero-text-link" /></div></div>
       <span className="closing-cta__folio">HOUZZ STUDIOS · A SPACE FOR LIVING WELL</span>
     </section>
   </>;

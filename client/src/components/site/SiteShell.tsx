@@ -3,6 +3,8 @@ import { Link, useLocation } from "wouter";
 import { ArrowDownRight, ArrowRight, ArrowUpRight, Menu, Minus, Search, ShoppingBag, X } from "lucide-react";
 import { categories, formatPrice, products, projects } from "@/data/siteData";
 import { useBag } from "./SiteContext";
+import { CallLink } from "./Primitives";
+import { phone } from "@/data/siteData";
 import { withBase } from "@/lib/utils";
 
 const navItems = [
@@ -40,6 +42,7 @@ function Header({ onPanel, activePanel }: { onPanel: (panel: Panel) => void; act
         {navItems.map(([label, href]) => <Link key={label} href={href} className={location === href ? "is-current" : ""}>{label}</Link>)}
       </nav>
       <div className="header-actions">
+        <CallLink className="header-call" />
         <button type="button" className={`icon-button${activePanel === "search" ? " is-active" : ""}`} aria-label={activePanel === "search" ? "Close search" : "Search"} aria-expanded={activePanel === "search"} onClick={() => onPanel(activePanel === "search" ? null : "search")}><Search size={18} strokeWidth={1.5} /></button>
         <button type="button" className={`icon-button bag-button${activePanel === "bag" ? " is-active" : ""}`} aria-label="Open bag" aria-expanded={activePanel === "bag"} onClick={() => onPanel(activePanel === "bag" ? null : "bag")}><ShoppingBag size={18} strokeWidth={1.5} /><BagCount /></button>
         <button type="button" className="icon-button mobile-menu-button" aria-label={activePanel === "menu" ? "Close menu" : "Open menu"} aria-expanded={activePanel === "menu"} onClick={() => onPanel(activePanel === "menu" ? null : "menu")}>{activePanel === "menu" ? <X size={20} /> : <Menu size={20} strokeWidth={1.5} />}</button>
@@ -88,6 +91,7 @@ function MenuPanel({ close }: { close: () => void }) {
   return <div className="overlay-panel overlay-panel--menu" role="dialog" aria-modal="true" aria-label="Site menu">
     <div className="overlay-panel__top"><span className="eyebrow">HOUZZ STUDIOS · INDIA</span><button className="icon-button" onClick={close} type="button" aria-label="Close menu"><X size={20} /></button></div>
     <nav className="menu-panel__links">{navItems.map(([label, href], index) => <Link key={label} href={href} onClick={close}><span className="menu-index">0{index + 1}</span><span>{label}</span><ArrowUpRight size={18} /></Link>)}</nav>
+    <CallLink className="menu-panel__call button button--dark">Call {phone.display}</CallLink>
     <div className="menu-panel__foot"><span>FURNITURE / INTERIORS / DESIGN</span><ArrowDownRight size={18} /></div>
   </div>;
 }
@@ -98,7 +102,7 @@ function SiteFooter() {
       <div className="footer-brand"><BrandMark /><p>Thoughtful furniture and interiors, shaped by material, craft and the way you live.</p><span className="footer-manifesto">Made to feel like yours.</span></div>
       <div className="footer-column"><p className="eyebrow">EXPLORE</p>{navItems.slice(0, 5).map(([label, href]) => <Link key={label} href={href}>{label}</Link>)}</div>
       <div className="footer-column"><p className="eyebrow">FOLLOW</p><a href="https://www.instagram.com/" target="_blank" rel="noreferrer">Instagram <ArrowUpRight size={13} /></a><a href="https://www.pinterest.com/" target="_blank" rel="noreferrer">Pinterest <ArrowUpRight size={13} /></a><a href="https://www.facebook.com/" target="_blank" rel="noreferrer">Facebook <ArrowUpRight size={13} /></a></div>
-      <div className="footer-column footer-contact"><p className="eyebrow">A NOTE TO THE STUDIO</p><p>Visits by appointment</p><p>Working across India</p><Link to="/contact">Begin an enquiry <ArrowUpRight size={13} /></Link></div>
+      <div className="footer-column footer-contact"><p className="eyebrow">A NOTE TO THE STUDIO</p><p>Visits by appointment</p><p>Working across India</p><CallLink className="footer-call">{phone.display}</CallLink><Link to="/contact">Begin an enquiry <ArrowUpRight size={13} /></Link></div>
     </div>
     <div className="site-footer__bottom"><span>© {new Date().getFullYear()} HOUZZ STUDIOS</span><span>FURNITURE · INTERIORS · DESIGN</span><a href="#top">BACK TO TOP ↑</a></div>
   </footer>;

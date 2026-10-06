@@ -163,3 +163,5 @@ export function getPageMeta(path: string): PageMetaData {
 }
 
 export const formatPrice = (amount: number) => `₹${amount.toLocaleString("en-IN")}`;
+
+export const phone = { display: "(866) 381-6479", tel: "+18663816479" };
